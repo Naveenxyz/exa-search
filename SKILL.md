@@ -9,24 +9,6 @@ compatibility: Node.js 18+; no npm dependencies.
 
 Neural web search built for AI agents. Returns clean, pre-extracted page content (no scraping needed) and supports semantic ("neural"), keyword, and auto-routed search.
 
-## Setup
-
-Get a free API key at https://dashboard.exa.ai/api-keys.
-
-The scripts read the key from **either** of these locations (env var wins if both are set):
-
-```bash
-# Option 1 — environment variable (good for shells, CI)
-export EXA_API_KEY=your-key-here
-
-# Option 2 — config file (works without touching shell rc)
-mkdir -p ~/.config/exa
-printf '%s' 'your-key-here' > ~/.config/exa/key
-chmod 600 ~/.config/exa/key
-```
-
-Requires Node.js 18+ (uses built-in `fetch`). No `npm install` needed.
-
 ## Search
 
 ```bash

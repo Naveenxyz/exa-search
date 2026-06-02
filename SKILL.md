@@ -30,18 +30,20 @@ Requires Node.js 18+ (uses built-in `fetch`). No `npm install` needed.
 ## Search
 
 ```bash
-{baseDir}/search.js "query"                          # 5 results, snippets only
-{baseDir}/search.js "query" -n 10                    # More results (max 100)
-{baseDir}/search.js "query" --contents               # Include page text as markdown
-{baseDir}/search.js "query" --highlights             # Include top excerpts (cheaper than --contents, ~10x fewer tokens)
-{baseDir}/search.js "query" --type fast              # ~450ms latency
-{baseDir}/search.js "query" --type instant           # ~250ms latency (chat/voice)
-{baseDir}/search.js "query" --type deep              # 4-15s, multi-step reasoning
-{baseDir}/search.js "query" --domain github.com      # Restrict to one domain (repeatable)
-{baseDir}/search.js "query" --fresh                  # Force livecrawl (current content, slower)
-{baseDir}/search.js "query" --days 30                # Only results published in last 30 days
-{baseDir}/search.js "query" --category "research paper"  # Filter by content category
+./search.js "query"                          # 5 results, snippets only
+./search.js "query" -n 10                    # More results (max 100)
+./search.js "query" --contents               # Include page text as markdown
+./search.js "query" --highlights             # Include top excerpts (cheaper than --contents, ~10x fewer tokens)
+./search.js "query" --type fast              # ~450ms latency
+./search.js "query" --type instant           # ~250ms latency (chat/voice)
+./search.js "query" --type deep              # 4-15s, multi-step reasoning
+./search.js "query" --domain github.com      # Restrict to one domain (repeatable)
+./search.js "query" --fresh                  # Force livecrawl (current content, slower)
+./search.js "query" --days 30                # Only results published in last 30 days
+./search.js "query" --category "research paper"  # Filter by content category
 ```
+
+Paths above are relative to the skill directory (the directory containing this `SKILL.md`). Resolve them to absolute paths before running commands.
 
 Default `--type` is `auto` (Exa routes to the best variant per query). Valid types: `auto`, `fast`, `instant`, `deep-lite`, `deep`, `deep-reasoning`.
 
@@ -52,8 +54,8 @@ Default `--type` is `auto` (Exa routes to the best variant per query). Valid typ
 For factual questions where you want a synthesized cited answer instead of parsing results:
 
 ```bash
-{baseDir}/answer.js "What is the latest stable Node.js LTS version?"
-{baseDir}/answer.js "Who founded Anthropic?" --text   # Include source page text
+./answer.js "What is the latest stable Node.js LTS version?"
+./answer.js "Who founded Anthropic?" --text   # Include source page text
 ```
 
 ## When to Use

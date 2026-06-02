@@ -1,0 +1,23 @@
+{
+  "name": "exa-search-pi-skill",
+  "version": "1.0.0",
+  "description": "Pi skill for Exa neural web search, content extraction, and cited answers.",
+  "type": "module",
+  "keywords": [
+    "pi-package",
+    "pi-skill",
+    "exa",
+    "search",
+    "agent-skills"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Naveenxyz/exa-search.git"
+  },
+  "pi": {
+    "skills": [
+      "./"
+    ]
+  }
+}
